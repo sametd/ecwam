@@ -71,6 +71,10 @@ ecbuild_add_option( FEATURE ECWAM_LAUNCH
                     DEFAULT ON
                     DESCRIPTION "Use share/ecwam/scripts/ecwam-launch script to run ecwam tests" )
 
+ecbuild_add_option( FEATURE FTZ
+                    DEFAULT ON
+                    DESCRIPTION "Flush subnormal floats to zero while the wave model runs (x86 MXCSR FTZ|DAZ, scoped to WAVEMDL)" )
+
 ecbuild_add_option( FEATURE ECFLOW
                     DESCRIPTION "ecflow meter updates"
                     REQUIRED_PACKAGES "ecflow_light")

@@ -46,6 +46,7 @@ if( NOT TARGET ecwam_intfb )
 endif()
 
 list( APPEND ecwam_srcs
+  wam_ftz.c
   abort1.F90
   adjust.F90
   airsea.F90
@@ -418,6 +419,10 @@ endif()
 
 if( HAVE_OCEAN_COUPLING )
   list(APPEND ECWAM_DEFINITIONS WITH_NEMO )
+endif()
+
+if( HAVE_FTZ )
+  list(APPEND ECWAM_PRIVATE_DEFINITIONS WAM_HAVE_FTZ)
 endif()
 
 if( HAVE_ECFLOW )
